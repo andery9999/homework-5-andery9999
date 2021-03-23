@@ -21,6 +21,6 @@ if __name__ == "__main__":
     user_list.remove("stop")
     user_list.remove("start")
     math_list = [float(i) for i in user_list]
-    print(sum(math_list)/float(len(math_list)))
-    print(min(math_list))
-    print(max(math_list))
+    print(f"The average value you entered is: {sum(math_list)/float(len(math_list))}")
+    print(f"The minimum value you entered is: {min(math_list)}")
+    print(f"The maximum value you entered is : {max(math_list)}")
