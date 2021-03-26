@@ -22,6 +22,10 @@ if __name__ == "__main__":
         print(z)
     
     set = ("This", "is", "a", "simple", "set")
-    for a in range(3) :
-        for b in set :
+    for a in range(3):
+        for b in set:
             print(b)
+
+    for c in ("this", "is", "a", "simple", "set"):
+        for d in range(0,3):
+            print(c)
