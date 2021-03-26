@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     breakfast = "eggs,fruit,orange juice".split(",")
 
-    print(len(breakfast) is 3)
+    print(f"The length of breakfast list is {len(breakfast)}.")
 
     user_list = ["start"]
     while user_list[-1] != "stop" :
