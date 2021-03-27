@@ -14,13 +14,20 @@ if __name__ == "__main__":
 
     print(f"The length of breakfast list is {len(breakfast)}.")
 
-    user_list = ["start"]
-    while user_list[-1] != "stop" :
+    user_list = []
+    user_input = "start"
+    while user_input != "stop":
         user_input = input("Please enter a floating-point value (enter stop to stop):\n")
-        user_list.append(user_input)
-    user_list.remove("stop")
-    user_list.remove("start")
-    math_list = [float(i) for i in user_list]
-    print(f"The average value you entered is: {sum(math_list)/float(len(math_list))}")
-    print(f"The minimum value you entered is: {min(math_list)}")
-    print(f"The maximum value you entered is : {max(math_list)}")
+        if user_input == "stop":
+            breakpoint
+        else:
+            try:
+                user_input = float(user_input)
+            except:
+                print("Invalid input. Please enter a number or stop.")
+            else:
+                user_list.append(user_input)
+    print(f"You have entered {len(user_list)} numbers.")
+    print(f"The average value you entered is: {sum(user_list)/float(len(user_list))}")
+    print(f"The minimum value you entered is: {min(user_list)}")
+    print(f"The maximum value you entered is : {max(user_list)}")
